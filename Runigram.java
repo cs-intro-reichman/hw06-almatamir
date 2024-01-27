@@ -32,8 +32,6 @@ public class Runigram {
 		// imageOut = scaled(tinypic, 3, 5);
 		// System.out.println();
 		// print(imageOut);
-
-		System.out.println(print(morph(tinypic, ironman, 500));
 		
 	}
 
@@ -132,7 +130,7 @@ public class Runigram {
 	}
 	
 	/**
-	 * Returns an image which is the grayscaled version of the given image.
+	 * Returns an image which is the grayscaled (black and white) version of the given image.
 	 */
 	public static Color[][] grayScaled(Color[][] image) {
 		Color[][] newimage = new Color[image.length][image[0].length];
@@ -229,12 +227,12 @@ public class Runigram {
 		Color[][] newimage = new Color[source.length][source[0].length];
 		if (source.length != target.length || source[0].length != target[0].length)
 		{
-			target = scaled(target, source.length, source[0].length);
+			target = scaled(target, source[0].length, source.length);
 		}
 		for (int i = 0; i<=n; i++)
 		{
 			double alpha = (n-i)/n;
-			newimage = blend(target, source, alpha);
+			newimage = blend(source, target, alpha);
 			// Displays the image
 			Runigram.setCanvas(newimage);
 			Runigram.display(newimage);
