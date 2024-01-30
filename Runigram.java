@@ -206,10 +206,10 @@ public class Runigram {
 		Color[][] newimage = new Color[image.length][image[0].length];
 		for (int i = 0; i<=n; i++)
 		{
-			double alpha = (n-i)/n;
-			newimage = blend(grayScaled(image), image, alpha);
+			double alpha = (double)(n-i)/n;
+			newimage = blend(image, grayScaled(image), alpha);
 			// Displays the image
-			Runigram.setCanvas(newimage);
+			
 			Runigram.display(newimage);
 			StdDraw.pause(500);
 		}
