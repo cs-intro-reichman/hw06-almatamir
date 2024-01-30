@@ -231,10 +231,10 @@ public class Runigram {
 		}
 		for (int i = 0; i<=n; i++)
 		{
-			double alpha = (n-i)/n;
+			double alpha = (double)(n-i)/n;
 			newimage = blend(source, target, alpha);
 			// Displays the image
-			Runigram.setCanvas(newimage);
+			
 			Runigram.display(newimage);
 			StdDraw.pause(500);
 		}
